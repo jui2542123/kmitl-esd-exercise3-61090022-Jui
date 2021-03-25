@@ -1,9 +1,3 @@
 #Overview
-
-This is the model which use in the server.
-
-CustomerDTO
-
-- id
-- name
-- ageil
+Model
+CustomerDTO - id,name,age
