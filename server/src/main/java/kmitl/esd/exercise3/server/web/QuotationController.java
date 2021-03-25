@@ -17,9 +17,9 @@ public class QuotationController {
     QuotationService quotationService;
 
     /**
-     *get all of the quotations
+     *get all quotation
      *
-     * @return list of quotations
+     * @return list quotations
      */
     @GetMapping("/quotation")
     public List<Quotation> getAllQuotations() {
@@ -27,10 +27,10 @@ public class QuotationController {
     }
 
     /**
-     *get quotation by customer id
+     *get quotation
      *
-     * @param id of the quotation
-     * @return list of quotations
+     * @param id
+     * @return list quotations
      */
     @GetMapping("/quotation/{id}")
     public List<Quotation> getQuotationsByCustomerId(@PathVariable("id") Long id) {

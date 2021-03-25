@@ -10,6 +10,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(basePackages = {"kmitl.esd.exercise3"})
 @EnableJpaRepositories(basePackages={"kmitl.esd.exercise3.repo"})
 @EntityScan(basePackages={"kmitl.esd.exercise3.model"})
+/**
+ * Main server method
+ */
 
 public class Server {
 

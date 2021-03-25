@@ -11,10 +11,10 @@ import java.io.Serializable;
 
 @Setter @Getter
 public class CustomerDTO implements Serializable {
-    private Long id; // defined id
-    private String name; // defined  customer name
-    private Long age; // defined age
-    private String remark; // defined text
+    private Long id;
+    private String name;
+    private Long age;
+    private String remark;
 
     public CustomerDTO(){ }
 
@@ -24,7 +24,7 @@ public class CustomerDTO implements Serializable {
     }
 
     /**
-     * Constructor for customer's DTO class
+     * Constructor
      * @param id
      * @param name
      * @param age
@@ -37,11 +37,11 @@ public class CustomerDTO implements Serializable {
     }
 
     /**
-     * Function for printing a customer details
+     * print details
      * @return customer details in string format
      */
     public String toString(){
-        return Long.toString(id) + ", " + name + ", " + age;
+        return Long.toString(id) + name + age;
     }
 }
 

@@ -28,7 +28,7 @@ import lombok.Setter;
 @Getter
 public class Quotation {
     /**
-     * quotation's id - primary key
+     * quotation's id
      */
     @Id
     @Column
@@ -41,13 +41,13 @@ public class Quotation {
     private String reference;
 
     /**
-     * a quote must have one customer
+     * @ManyToOne = atleast one customer
      */
     @ManyToOne @NotNull
     private CustomerDTO customer;
 
     /**
-     * price of the quote
+     * price
      */
     @NotNull @Min(0)
     private float price;
@@ -59,22 +59,22 @@ public class Quotation {
     private LocalDateTime creationDateTime;
 
     /**
-     * constraint for temporal field - time that this quote is valid until
+     * Temporal field
      */
     @Column @Past
     private LocalDateTime validUntilDateTime;
 
     /**
-     * constraint - time that this quote is valid until
+     * constraint
      */
     @Column @Past
     private LocalDateTime saveDateTime;
 
     /**
-     * Constructor for creating quotation
-     * @param id customer id
-     * @param reference name of the customer
-     * @param customer age in years
+     * Constructor(Quotation)
+     * @param id
+     * @param reference
+     * @param customer
      */
     public Quotation(Long id, String reference, CustomerDTO customer) {
         this.id = id;
