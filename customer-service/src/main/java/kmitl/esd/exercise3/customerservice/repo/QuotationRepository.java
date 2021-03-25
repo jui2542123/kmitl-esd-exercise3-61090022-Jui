@@ -17,7 +17,7 @@ public interface QuotationRepository extends CrudRepository<Quotation, Long> {
     /**
      * Find quotes by time
      * @param creationDateTime
-     * @return creation date time quotes
+     * @return creation datetime quotes
      */
     @Query("select q from Quotation q where q.creationDateTime >= :creationDateTime")
     List<Quotation> findAllWithCreationDateTimeAfter(@Param("creationDateTime") LocalDateTime creationDateTime);
