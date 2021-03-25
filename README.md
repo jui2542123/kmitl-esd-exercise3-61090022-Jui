@@ -1,16 +1,15 @@
+#Git 
+https://github.com/jui2542123/kmitl-esd-exercise3-61090022-Jui
+
+
 # Overview
+Server (customer service):
+a) REST services: Create a customer and a quotation API (spring controllers) that support CRUD operations for customers and quotations
+b) Business Logic: create customer and a quotation business logic classes (spring services) that support CRUD operations. The quotation creation must validate a customer (must exist).
+c) Persistence: create customer and a quotation persistence classes (spring JPA) that support CRUD operations. Use H2 database.
+Client: Call the server API (customer and quotation API) and test the CRUD
+Model: customer and quotation JPA entity classes
 
-https://github.com/chanadech/kmitl-esd-exercise3-61090003-Chanadech
-
-This project covers the excercise 2 (Client, Server, API) for KMITL ESD - lecture 5-7:
-- Server with API (RESTful web services) 
-- Client using the server API
-- Model for data objects
-- Homework
-
-The client and the server are using the Spring framework.
-
-# More Information
 
 ## Reference Documentation
 For further reference, please consider the following sections:
@@ -26,4 +25,3 @@ The following guides illustrate how to use some features concretely:
 * [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-
