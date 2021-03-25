@@ -1,10 +1,8 @@
 #Overview
 
-This is the customer service used in the server.
+Customer services functions are contains here
 
-Customer Service have the following functions:
-
-- createCustomer
-- getAllCustomers
-- updateCustomer
-- deleteCustomer
+- createCustomer - create customer
+- getAllCustomers - get customer infomatiom
+- updateCustomer - update customer infomation
+- deleteCustomer - delete a customer
