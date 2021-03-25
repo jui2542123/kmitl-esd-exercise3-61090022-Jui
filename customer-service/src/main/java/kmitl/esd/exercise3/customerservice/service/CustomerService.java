@@ -19,7 +19,7 @@ public class CustomerService {
     CustomerRepository customerRepository;
 
     /**
-     * Function to get all of the customers
+     * get all customers
      *
      * @return list of customers
      */
@@ -30,10 +30,10 @@ public class CustomerService {
     }
 
     /**
-     * Function to get customers with a specified name
+     * get customer name
      *
      * @param name of the customer
-     * @return list of customers with then name
+     * @return list of customers + name
      */
     public List<CustomerDTO> getCustomersByName(String name) {
         List<CustomerDTO> customers = new ArrayList<>();
@@ -42,7 +42,7 @@ public class CustomerService {
     }
 
     /**
-     * Function to get customer by id
+     * get customer
      *
      * @param id of the customer
      * @return customer with the id
@@ -52,7 +52,7 @@ public class CustomerService {
     }
 
     /**
-     * Function to create or update customer
+     * create or update
      *
      * @return void
      */
@@ -63,7 +63,7 @@ public class CustomerService {
     /**
      * Function to delete customer
      *
-     * @param id of the customer
+     * @param customerid
      * @return void
      */
     public void deleteCustomer(Long id) {

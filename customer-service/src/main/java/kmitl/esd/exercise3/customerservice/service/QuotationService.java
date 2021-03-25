@@ -31,9 +31,9 @@ public class QuotationService {
     CustomerService customerService;
 
     /**
-     * Function to get all of the quotations
+     * get all quotations
      *
-     * @return list of quotations
+     * @return quotations list
      */
     public List<Quotation> getAllQuotations() {
         List<Quotation> quotations = new ArrayList<>();
@@ -42,29 +42,29 @@ public class QuotationService {
     }
 
     /**
-     * Get quotations by customer id
+     * Get quotations
      *
      * @param customerId
-     * @return list of quotations with that customer id
+     * @return quotations list customerid
      */
     public List<Quotation> getQuotationsByCustomerId(Long customerId) {
         return quotationRepository.findAllByCustomerId(customerId);
     }
 
     /**
-     * Save or update quotation
+     * Save or update
      *
-     * @param quotation to be inserted or updated
+     * @param quotation
      * @return void
      */
     public void saveOrUpdate(Quotation quotation) {
         if (quotation.getCustomer() == null || quotation.getCustomer().getId() == null) {
-            throw new Error("A Quotation must have a customer");
+            throw new Error("Must have customer");
         }
 
         CustomerDTO customer = customerService.getCustomerById(quotation.getCustomer().getId());
         if (customer == null) {
-            throw new Error("Customer not found");
+            throw new Error("No customer");
         }
 
         logger.info("customer: " + customer.toString());
@@ -75,7 +75,7 @@ public class QuotationService {
     /**
      * Delete quotation
      *
-     * @param quotationId to delete
+     * @param quotationId
      * @return void
      */
     public void delete(Long quotationId) {

@@ -10,9 +10,9 @@ import java.util.List;
 public interface CustomerRepository extends CrudRepository<CustomerDTO, Long>{
 
     /**
-     * Find customers by name and ordered by name
-     * @param name of customers to find
-     * @return customers with the name or empty list
+     * Find customers by name
+     * @param customer name
+     * @return customers name
      */
     List<CustomerDTO> findByNameOrderByName(String name);
 ;

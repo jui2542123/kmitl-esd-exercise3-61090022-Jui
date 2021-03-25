@@ -28,7 +28,7 @@ class CustomerServiceTest {
      */
     @Test
     void createCustomer() {
-        customerService.createCustomer(new CustomerDTO(3L,"Dech",20L));
+        customerService.createCustomer(new CustomerDTO(3L,"Ace",2L));
         assertEquals(customerService.getAllCustomers().size(),2);
         customerService.deleteCustomer(3L);
     }
@@ -38,11 +38,11 @@ class CustomerServiceTest {
      */
     @Test
     void updateCustomer() {
-        CustomerDTO newCustomer = customerService.createCustomer(new CustomerDTO(3L,"Dech",20L));
-        newCustomer.setName("Dech");
+        CustomerDTO newCustomer = customerService.createCustomer(new CustomerDTO(3L,"Ace",2L));
+        newCustomer.setName("Ace");
 
         CustomerDTO updateCustomer = customerService.updateCustomer(newCustomer);
-        assertEquals(updateCustomer.getName(),"Dech2");
+        assertEquals(updateCustomer.getName(),"Aether");
         customerService.deleteCustomer(3L);
     }
 
@@ -54,6 +54,6 @@ class CustomerServiceTest {
         assertEquals(customerService.getAllCustomers().size(),1);
         customerService.deleteCustomer(1L);
         assertEquals(customerService.getAllCustomers().size(),0);
-        customerService.createCustomer(new CustomerDTO(1L,"Dech3", 21L));
+        customerService.createCustomer(new CustomerDTO(1L,"Aesther", 3L));
     }
 }

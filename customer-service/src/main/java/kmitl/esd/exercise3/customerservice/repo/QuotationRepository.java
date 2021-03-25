@@ -16,8 +16,8 @@ public interface QuotationRepository extends CrudRepository<Quotation, Long> {
 
     /**
      * Find quotes by time
-     * @param creationDateTime of quote to find
-     * @return quotes with creation date time after/equal the param date time
+     * @param creationDateTime
+     * @return creation date time quotes
      */
     @Query("select q from Quotation q where q.creationDateTime >= :creationDateTime")
     List<Quotation> findAllWithCreationDateTimeAfter(@Param("creationDateTime") LocalDateTime creationDateTime);
@@ -25,7 +25,7 @@ public interface QuotationRepository extends CrudRepository<Quotation, Long> {
     /**
      * Find quotes by id
      * @param customerId
-     * @return quotes with that customer id
+     * @return customer id quotes
      */
     List<Quotation> findAllByCustomerId(@Param("customerId") Long customerId);
 }
