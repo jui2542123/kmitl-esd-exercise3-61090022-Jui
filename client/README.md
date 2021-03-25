@@ -1,4 +1,5 @@
 #Overview
 
-This is the client module.
+
+module that will be working as our client to use the methods get,create,update,delete.
 
